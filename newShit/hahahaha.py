@@ -102,6 +102,7 @@ while True:
                 print('aaha')
                 counter += 1
                 k = -1
+<<<<<<< Updated upstream
             elif 1 in keyMapping:
                 print(letterDict.get(str(keyMapping.index(1)+1)))
                 if letterDict.get(str(keyMapping.index(1)+1)) == letter:
@@ -110,6 +111,14 @@ while True:
                 else:
                     listOfShit[counter][k] = red
                     mistakes += 1
+=======
+            if pygame.key.name(event.key) == letter:
+                print('fuck yeah')
+                listOfShit[counter][k] = green
+            elif pygame.key.name(event.key) != letter:
+                listOfShit[counter][k] = red
+                mistakes += 1
+>>>>>>> Stashed changes
             if k < len(letters)-1:
                 totalLetters += 1
                 k += 1
