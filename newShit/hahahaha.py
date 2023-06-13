@@ -45,7 +45,6 @@ font = pygame.font.Font('freesansbold.ttf', 32)
 words = ['thewiseman', 'hahahahaha', 'bitchass', 'fuckoff', 'bitch', 'what', 'fjfjfjfjfjfjfj']
  
 # create a rectangular object for the
-# text surface object
  
 # set the center of the rectangular object.
  
@@ -101,6 +100,7 @@ while True:
                 print('aaha')
                 counter += 1
                 k = -1
+<<<<<<< Updated upstream
             elif keys[pygame.K_BACKSPACE] and k >= 0:
                 listOfShit[counter][k] = black
                 k -= 2
@@ -109,6 +109,12 @@ while True:
                 print('fuck yeah')
                 listOfShit[counter][k] = green
             else:
+=======
+            if pygame.key.name(event.key) == letter:
+                print('fuck yeah')
+                listOfShit[counter][k] = green
+            elif pygame.key.name(event.key) != letter:
+>>>>>>> Stashed changes
                 listOfShit[counter][k] = red
                 mistakes += 1
             if k < len(letters)-1:
